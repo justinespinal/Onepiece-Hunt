@@ -5,7 +5,7 @@ export default function Page() {
         <div className="bg-[url('/assets/background.jpg')] bg-center h-[100vh] w-full">
             <div className="flex flex-col justify-center items-center p-10">
                 <Image
-                    src="/assets/onepiecedle-logo.png"
+                    src="/assets/logo.png"
                     width={300}
                     height={300}
                     alt="logo"
