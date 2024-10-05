@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { signOut } from "@/auth"
 import bg from "../../public/assets/background.jpg"
 
 export default function Page() {
@@ -22,16 +21,6 @@ export default function Page() {
                     alt="logo"
                     className="transition-all hover:scale-110"
                 />
-                <form 
-                    action = { async () => {
-                        "use server";
-                        await signOut();
-                    }}
-                    >
-                    <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
-                        <div className="hidden md:block">Sign Out</div>
-                    </button>
-                </form>
                 <div className="flex flex-col gap-3 opacity-55">
                     <div className="bg-white rounded-md w-[75vw] h-[10vh]">
 

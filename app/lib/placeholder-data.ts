@@ -1,0 +1,122 @@
+export const characters = [
+    {
+        name: "Monkey D. Luffy",
+        gender: "Male",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 3000000000,
+        height: 174,
+        origin: "East Blue",
+        firstArc: "Romance Dawn Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Roronoa Zoro",
+        gender: "Male",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "None",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 1111000000,
+        height: 181,
+        origin: "East Blue",
+        firstArc: "Romance Dawn Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Nami",
+        gender: "Female",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "None",
+        haki: "None",
+        lastBounty: 366000000,
+        height: 170,
+        origin: "East Blue",
+        firstArc: "Orange Town Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Nico Robin",
+        gender: "Female",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "Paramecia",
+        haki: "None",
+        lastBounty: 930000000,
+        height: 188,
+        origin: "West Blue",
+        firstArc: "Alabasta Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Sanji",
+        gender: "Male",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "None",
+        haki: "Observation, Armament",
+        lastBounty: 1032000000,
+        height: 180,
+        origin: "North Blue",
+        firstArc: "Baratie Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Trafalgar D. Law",
+        gender: "Male",
+        affiliation: "Heart Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament",
+        lastBounty: 3000000000,
+        height: 191,
+        origin: "North Blue",
+        firstArc: "Sabaody Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Boa Hancock",
+        gender: "Female",
+        affiliation: "Kuja Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 1659000000,
+        height: 191,
+        origin: "Amazon Lily",
+        firstArc: "Amazon Lily Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Donquixote Doflamingo",
+        gender: "Male",
+        affiliation: "Donquixote Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 340000000,
+        height: 305,
+        origin: "North Blue",
+        firstArc: "Jaya Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Shanks",
+        gender: "Male",
+        affiliation: "Red-Haired Pirates",
+        devilFruit: "None",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 4048900000,
+        height: 199,
+        origin: "West Blue",
+        firstArc: "Romance Dawn Arc",
+        imageUrl: " "
+    },
+    {
+        name: "Charlotte Linlin",
+        gender: "Female",
+        affiliation: "Big Mom Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 4388000000,
+        height: 880,
+        origin: "Elbaf",
+        firstArc: "Whole Cake Arc",
+        imageUrl: " "
+    }
+];
