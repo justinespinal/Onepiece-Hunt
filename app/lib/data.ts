@@ -1,5 +1,7 @@
 import { sql } from "@vercel/postgres";
 import { Character } from "@/app/lib/definitions";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function fetchCharacters(){
     try{

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import bg from "../../../public/assets/background.jpg"
+import bg from "../../../public/assets/background-2.jpg"
 import { fetchCharacters, fetchRandomCharacter } from "@/app/lib/data"
 import Select from "./Select"
 import { Character } from "@/app/lib/definitions"
@@ -12,7 +12,7 @@ export default async function Home() {
 
     console.log(random)
     return(
-        <div className="h-[100vh] w-full">
+        <div className="h-[100vh] w-full overflow-y-hidden">
             <span className="absolute">
                 <Image
                     src={bg}

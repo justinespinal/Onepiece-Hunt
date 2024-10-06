@@ -17,15 +17,17 @@ export default function Select({characters, checkCorrect}:{characters:Character[
     }
 
     return (
-        <div>
-            <form className="">
-                <input onChange={(e) => {updateValue(e.target.value)}}  placeholder="Character name..." className="w-full p-5 placeholder:text-black text-black"></input>
-                <div className="overflow-y-auto max-h-[20vh]">
-                    {filtered?.map((character) => (
-                        <div onClick={async () => {await choiceMade(character)}} key={character.id} className="text-black bg-blue hover:bg-blue-400"><SelectItem id={character.id} name={character.name} imageurl={character.imageUrl} /></div>
-                    ))}
-                </div>
-            </form>
+        <div className="w-[25vw]">
+            <div className="bg-[#fffcf4] border-[3px] border-[#584c44] rounded-md p-5">
+                <input onChange={(e) => {updateValue(e.target.value)}}  placeholder="Character name..." className="w-full p-2 placeholder:text-black text-black bg-transparent border-[3px] rounded border-[#ece4c4]"></input>
+            </div>
+            <div className="overflow-y-auto max-h-[20vh] rounded bg-[#fffcf4]">
+                {filtered?.map((character) => (
+                    <div onClick={async () => {await choiceMade(character)}} key={character.id} className="text-black bg-blue hover:bg-blue-400">
+                        <SelectItem id={character.id} name={character.name} imageurl={character.imageurl} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

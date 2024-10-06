@@ -9,11 +9,11 @@ export type Character = {
     name: string,
     gender: string,
     affiliation: string,
-    devilFruit: string,
+    devilfruit: string,
     haki: string,
-    lastBounty: number,
+    lastbounty: number,
     height: number,
     origin: string,
-    firstArc: string,
-    imageUrl: string
+    firstarc: string,
+    imageurl: string
 }
