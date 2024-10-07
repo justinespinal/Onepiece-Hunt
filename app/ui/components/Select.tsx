@@ -5,14 +5,17 @@ import SelectItem from "./SelectItem";
 export default function Select({characters, checkCorrect}:{characters:Character[] | undefined, checkCorrect: Function}){
     let value = "z"
     const [filtered, setFiltered] = useState<Character[]|undefined>([])
+    const [guessed, setGuessed] = useState<Set<string> | undefined>(new Set())
+    
     function updateValue(target:string){
         value = target
         if(value.trim()=="")setFiltered([])
-        else setFiltered(characters?.filter((character:Character) => character.name.toLowerCase().includes(value)))
+        else setFiltered(characters?.filter((character:Character) => character.name.toLowerCase().includes(value) && !guessed?.has(character.id)))
     }
 
     async function choiceMade(character: Character){
         setFiltered([])
+        setGuessed(guessed?.add(character.id))
         checkCorrect(character)
     }
 

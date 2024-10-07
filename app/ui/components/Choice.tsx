@@ -15,7 +15,7 @@ export default function Choice({character, random}:{character: Character | undef
         <div className="grid grid-cols-9 gap-2 text-sm font-bold text-center">
             <div className="flex justify-center items-end transition-all hover:scale-105">
                 <Image
-                    src="/assets/nami.png"
+                    src={`/assets${character?.imageurl}`}
                     width={100}
                     height={100}
                     alt="nami"
