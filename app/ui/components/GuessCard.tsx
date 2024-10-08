@@ -6,7 +6,7 @@ import Image from "next/image"
 import "../styles/GuessCard.css"
 
 
-export default function GuessCard() {
+export default function GuessCard({attempts}:{attempts: number}) {
     return (
         <div className="bg-[#ece4c4] p-[6px] rounded border-[2px] border-[#584c44] relative">
             <Image
@@ -18,7 +18,12 @@ export default function GuessCard() {
             />
             <div className="font-bold border-[2px] border-[#584c44] bg-[#fffcf4] rounded p-10 text-center">
                 <h1 className="text-[#584c44]">GUESS THE ONE PIECE CHARACTER</h1>
-                <h3 className="text-slate-400">Type any character to begin</h3>
+                {attempts===0 && 
+                    <h3 className="text-slate-400">Type any character to begin</h3>
+                }
+                {attempts!=0 &&
+                    <h3 className="text-slate-400">Attempts made: {attempts}</h3>
+                }
             </div>
             <Image
                 src={bottomLeft}

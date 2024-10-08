@@ -8,9 +8,24 @@ export default function Choice({character, random}:{character: Character | undef
     const affiliation = character?.affiliation === random?.affiliation
     const devilfruit = character?.devilfruit === random?.devilfruit
     const haki = new Set(character?.haki.split(", ")).intersection(new Set(random?.haki.split(", "))).size
-    
-    const height = character?.height === random?.height
+    console.log("haki:"+haki)
+    // const height = character?.height === random?.height
     const origin = character?.origin === random?.origin
+
+    const convertBounty = (bounty: number | undefined) => {
+        if(!bounty){
+            return ""
+        }
+        const stringBounty = bounty.toString()
+        if(stringBounty.length >= 10){
+            return `${stringBounty?.charAt(0)}.${stringBounty?.charAt(1)} B`
+        }else if(stringBounty.length>=9){
+            return `${stringBounty?.charAt(0)}.${stringBounty?.charAt(1)} M`
+        }else{
+            return bounty
+        }
+    }
+
     return(
         <div className="grid grid-cols-9 gap-2 text-sm font-bold text-center">
             <div className="flex justify-center items-end transition-all hover:scale-105">
@@ -54,12 +69,12 @@ export default function Choice({character, random}:{character: Character | undef
                 {
                     "correct": haki === Math.max(character?.haki.split(", ").length ||  0, random?.haki.split(", ").length || 0),
                     "incorrect": haki === 0,
-                    "partial": haki < Math.max(character?.haki.split(", ").length ||  0, random?.haki.split(", ").length || 0)
+                    "partial": haki < Math.max(character?.haki.split(", ").length ||  0, random?.haki.split(", ").length || 0) && haki > 0
                 }
             )}>
                 {character?.haki}
             </div>
-            <div className="flex justify-center square-items transition-all hover:scale-105">{character?.lastbounty}</div>
+            <div className="flex justify-center square-items transition-all hover:scale-105">{convertBounty(character?.lastbounty)}</div>
             <div className="flex justify-center square-items transition-all hover:scale-105">{character?.height} cm</div>
             <div className={clsx(
                 "flex justify-center square-items transition-all hover:scale-105",

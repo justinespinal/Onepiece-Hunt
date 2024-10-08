@@ -2,14 +2,14 @@
 import { Character } from "@/app/lib/definitions";
 import { useState } from "react";
 import SelectItem from "./SelectItem";
-export default function Select({characters, checkCorrect}:{characters:Character[] | undefined, checkCorrect: Function}){
+export default function Select({characters, checkCorrect}:{characters:Character[] | undefined, checkCorrect: (character: Character) => void}){
     let value = "z"
     const [filtered, setFiltered] = useState<Character[]|undefined>([])
     const [guessed, setGuessed] = useState<Set<string> | undefined>(new Set())
     
     function updateValue(target:string){
         value = target
-        if(value.trim()=="")setFiltered([])
+        if(value.trim()=="") setFiltered([])
         else setFiltered(characters?.filter((character:Character) => character.name.toLowerCase().includes(value) && !guessed?.has(character.id)))
     }
 
@@ -24,10 +24,10 @@ export default function Select({characters, checkCorrect}:{characters:Character[
             <div className="bg-[#fffcf4] border-[3px] border-[#584c44] rounded-md p-5">
                 <input onChange={(e) => {updateValue(e.target.value)}}  placeholder="Character name..." className="w-full p-2 placeholder:text-black text-black bg-transparent border-[3px] rounded border-[#ece4c4]"></input>
             </div>
-            <div className="overflow-y-auto max-h-[20vh] rounded bg-[#fffcf4]">
+            <div className="max-h-[20vh] rounded bg-[#fffcf4] overflow-y-auto">
                 {filtered?.map((character) => (
                     <div onClick={async () => {await choiceMade(character)}} key={character.id} className="text-black bg-blue hover:bg-blue-400">
-                        <SelectItem id={character.id} name={character.name} imageurl={character.imageurl} />
+                        <SelectItem name={character.name} imageurl={character.imageurl} />
                     </div>
                 ))}
             </div>

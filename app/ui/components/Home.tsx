@@ -1,8 +1,6 @@
 import Image from "next/image"
-import bg from "../../../public/assets/background-2.jpg"
+import bg from "../../../public/assets/background-3.jpg"
 import { fetchCharacters, fetchRandomCharacter } from "@/app/lib/data"
-import Select from "./Select"
-import { Character } from "@/app/lib/definitions"
 import HomeClient from "./HomeClient"
 
 export default async function Home() {
