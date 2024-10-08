@@ -5,7 +5,7 @@ import Select from "./Select"
 import Choices from "./Choices"
 import { useState } from "react"
 import { UserProfile, useUser } from '@auth0/nextjs-auth0/client';
-// import { refreshCache } from "@/app/lib/action"
+import { refreshCache } from "@/app/lib/action"
 import GuessCard from "./GuessCard"
 import Link from "next/link"
 import Winner from "./Winner"
@@ -61,7 +61,7 @@ export default function HomeClient({characters, random}:{characters:Character[]|
                 )} alt="user profile image"></img>
             </Link>
             <a href="/api/auth/logout">{user ? "Logout" : ""}</a>
-            {/* <button onClick={refreshCache}>Refresh</button> */}
+            <button onClick={refreshCache}>Refresh</button>
             <Image
                 src="/assets/logo.png"
                 width={500}

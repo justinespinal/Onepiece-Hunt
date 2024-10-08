@@ -14,7 +14,7 @@ export default function Choice({character, random}:{character: Character | undef
 
     const convertBounty = (bounty: number | undefined) => {
         if(!bounty){
-            return " "
+            return ""
         }
         const stringBounty = bounty.toString()
         if(stringBounty.length >= 10){
