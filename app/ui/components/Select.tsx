@@ -9,10 +9,11 @@ export default function Select({characters, checkCorrect, user}:{characters:Char
     const [filtered, setFiltered] = useState<Character[]|undefined>([])
     const [guessed, setGuessed] = useState<Set<string> | undefined>(new Set())
     console.log(characters)
+
     function updateValue(target:string){
         value = target
         if(value.trim()=="") setFiltered([])
-        else setFiltered(characters?.filter((character:Character) => character.name.toLowerCase().includes(value) && !guessed?.has(character.id)))
+        else setFiltered(characters?.filter((character:Character) => character.name.toLowerCase().includes(value.toLowerCase()) && !guessed?.has(character.id)))
     }
 
     async function choiceMade(character: Character){

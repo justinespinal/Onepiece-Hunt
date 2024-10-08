@@ -55,10 +55,15 @@ export default function HomeClient({characters, random}:{characters:Character[]|
                 <Winner character={random} guesses={guesses}/>
             </div>
             <Link href="/profile" className="ml-auto mt-10 mr-10 w-[3em]">
-                <img src={userPicture(user)} className={clsx("rounded-full", {
-                    "hidden": !user
-                }
-                )} alt="user profile image"></img>
+                {user && (
+                    <Image
+                    src={userPicture(user)}
+                    width={48}
+                    height={48}
+                    className="rounded-full"
+                    alt="user profile image"
+                    />
+                )}
             </Link>
             <a href="/api/auth/logout">{user ? "Logout" : ""}</a>
             <button onClick={refreshCache}>Refresh</button>
