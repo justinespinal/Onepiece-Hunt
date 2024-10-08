@@ -55,10 +55,13 @@ export default function HomeClient({characters, random}:{characters:Character[]|
                 <Winner character={random} guesses={guesses}/>
             </div>
             <Link href="/profile" className="ml-auto mt-10 mr-10 w-[3em]">
-                <img src={userPicture(user)} className="rounded-full" alt="user profile image"></img>
+                <img src={userPicture(user)} className={clsx("rounded-full", {
+                    "hidden": !user
+                }
+                )} alt="user profile image"></img>
             </Link>
-            {/* <a href="/api/auth/logout">Logout</a>
-            <button onClick={refreshCache}>Refresh</button> */}
+            <a href="/api/auth/logout">{user ? "Logout" : ""}</a>
+            {/* <button onClick={refreshCache}>Refresh</button> */}
             <Image
                 src="/assets/logo.png"
                 width={500}
@@ -67,9 +70,9 @@ export default function HomeClient({characters, random}:{characters:Character[]|
                 className="transition-all hover:scale-110"
             />
             <div className="flex flex-col gap-3 items-center">
-                <GuessCard attempts={guesses}/>
+                <GuessCard attempts={guesses} user={user}/>
                 <div>
-                    <Select characters={characters} checkCorrect={checkCorrect}/>
+                    <Select characters={characters} checkCorrect={checkCorrect} user={user}/>
                 </div>
                 <div className="h-[40vh] overflow-x-auto md:overflow-x-hidden">
                     {choiceMade && 

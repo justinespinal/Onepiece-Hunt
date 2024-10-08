@@ -2,7 +2,9 @@
 import { Character } from "@/app/lib/definitions";
 import { useState } from "react";
 import SelectItem from "./SelectItem";
-export default function Select({characters, checkCorrect}:{characters:Character[] | undefined, checkCorrect: (character: Character) => void}){
+import { UserProfile } from "@auth0/nextjs-auth0/client";
+
+export default function Select({characters, checkCorrect, user}:{characters:Character[] | undefined, checkCorrect: (character: Character) => void, user: UserProfile | undefined}){
     let value = "z"
     const [filtered, setFiltered] = useState<Character[]|undefined>([])
     const [guessed, setGuessed] = useState<Set<string> | undefined>(new Set())
@@ -22,7 +24,12 @@ export default function Select({characters, checkCorrect}:{characters:Character[
     return (
         <div className="w-[25vw]">
             <div className="bg-[#fffcf4] border-[3px] border-[#584c44] rounded-md p-5">
-                <input onChange={(e) => {updateValue(e.target.value)}}  placeholder="Character name..." className="w-full p-2 placeholder:text-black text-black bg-transparent border-[3px] rounded border-[#ece4c4]"></input>
+                {user && 
+                    <input onChange={(e) => {updateValue(e.target.value)}}  placeholder="Character name..." className="w-full p-2 placeholder:text-black text-black bg-transparent border-[3px] rounded border-[#ece4c4]"></input>
+                }
+                {!user &&
+                    <input onChange={(e) => {updateValue(e.target.value)}}  placeholder="Sign in to play" disabled className="w-full p-2 placeholder:text-slate-500 text-black bg-transparent border-[3px] rounded border-[#ece4c4]"></input>
+                }
             </div>
             <div className="max-h-[20vh] rounded bg-[#fffcf4] overflow-y-auto">
                 {filtered?.map((character) => (
