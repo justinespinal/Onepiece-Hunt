@@ -15,8 +15,12 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  height: 100vh;
+  color: white;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c1775072-e862-493c-8372-38c61fe596fb/df4a6re-30d31bc8-7b93-4238-96de-cc9a1f74c8ec.png/v1/fill/w_1192,h_670,q_70,strp/monkey_d__luffy_by_ziullf_df4a6re-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgwMCIsInBhdGgiOiJcL2ZcL2MxNzc1MDcyLWU4NjItNDkzYy04MzcyLTM4YzYxZmU1OTZmYlwvZGY0YTZyZS0zMGQzMWJjOC03YjkzLTQyMzgtOTZkZS1jYzlhMWY3NGM4ZWMucG5nIiwid2lkdGgiOiI8PTMyMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.sEhYtEfObIV9tfHtm40DpJWWhsGP2IChMexlugrP5nI");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 
