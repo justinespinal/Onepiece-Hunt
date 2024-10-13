@@ -107,7 +107,7 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
                     <Select characters={characters} checkCorrect={checkCorrect} user={user} won={won}/>
                 </div>
             </div>
-            <div className="h-[40vh] max-w-[75vw] overflow-x-auto p-4 lg:p-0">
+            <div className="h-[40vh] max-w-[75vw] overflow-x-auto overflow-y-hidden p-4 lg:p-0">
                 {choiceMade && 
                     <Choices characters={charactersGuessed} random={random}/>
                 }
