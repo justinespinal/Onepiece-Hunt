@@ -120,3 +120,139 @@ export const characters = [
         imageUrl: " "
     }
 ];
+
+export const arcs = [
+    {
+        name: "Romance Dawn",
+        arc_order: 1,
+    },
+    {
+        name: "Orange Town",
+        arc_order: 2,
+    },
+    {
+        name: "Syrup Village",
+        arc_order: 3,
+    },
+    {
+        name: "Baratie",
+        arc_order: 4,
+    },
+    {
+        name: "Arlong Park",
+        arc_order: 5,
+    },
+    {
+        name: "Loguetown",
+        arc_order: 6,
+    },
+    {
+        name: "Reverse Mountain",
+        arc_order: 7,
+    },
+    {
+        name: "Whisky Peak",
+        arc_order: 8,
+    },
+    {
+        name: "Little Garden",
+        arc_order: 9,
+    },
+    {
+        name: "Drum Island",
+        arc_order: 10,
+    },
+    {
+        name: "Arabasta",
+        arc_order: 11,
+    },
+    {
+        name: "Jaya",
+        arc_order: 12,
+    },
+    {
+        name: "Skypiea",
+        arc_order: 13,
+    },
+    {
+        name: "Long Ring Long Land",
+        arc_order: 14,
+    },
+    {
+        name: "Water 7",
+        arc_order: 15,
+    },
+    {
+        name: "Enies Lobby",
+        arc_order: 16,
+    },
+    {
+        name: "Post-Enies Lobby",
+        arc_order: 17,
+    },
+    {
+        name: "Thriller Bark",
+        arc_order: 18,
+    },
+    {
+        name: "Sabaody Archipelago",
+        arc_order: 19,
+    },
+    {
+        name: "Amazon Lily",
+        arc_order: 20,
+    },
+    {
+        name: "Impel Down",
+        arc_order: 21,
+    },
+    {
+        name: "Marineford",
+        arc_order: 22,
+    },
+    {
+        name: "Post-War",
+        arc_order: 23,
+    },
+    {
+        name: "Return to Sabaody",
+        arc_order: 24,
+    },
+    {
+        name: "Fish-Man Island",
+        arc_order: 25,
+    },
+    {
+        name: "Punk Hazard",
+        arc_order: 26,
+    },
+    {
+        name: "Dressrosa",
+        arc_order: 27,
+    },
+    {
+        name: "Zou",
+        arc_order: 28,
+    },
+    {
+        name: "Whole Cake Island",
+        arc_order: 29,
+    },
+    {
+        name: "Levely",
+        arc_order: 30,
+    },
+    {
+        name: "Wano Country",
+        arc_order: 31,
+    },
+    {
+        name: "Egghead",
+        arc_order: 32,
+    },
+    {
+        name: "Land of Gods",
+        arc_order: 33,
+    }
+];
+

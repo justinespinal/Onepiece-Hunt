@@ -22,3 +22,15 @@ export async function fetchRandomCharacter(){
         console.log(error)
     }
 }
+
+export async function fetchArcOrder({name}:{name:string | undefined}){
+    try{
+        const result = await sql`
+            SELECT arc_order FROM arcs
+            WHERE arcs.name = ${name}
+        `
+        return result.rows[0].arc_order
+    }catch(error){
+        console.log(error)
+    }
+}

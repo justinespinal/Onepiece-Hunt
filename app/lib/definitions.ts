@@ -17,3 +17,8 @@ export type Character = {
     firstarc: string,
     imageurl: string
 }
+
+export type Arc = {
+    name: string,
+    arc_order: number
+}

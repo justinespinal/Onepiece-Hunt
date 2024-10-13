@@ -1,6 +1,7 @@
 
 import { db } from "@vercel/postgres";
 //import { characters } from "../lib/placeholder-data";
+// import { arcs } from "../lib/placeholder-data";
 
 const client = await db.connect();
 
@@ -51,10 +52,33 @@ const client = await db.connect();
 //     return insertedCharacter
 // }
 
+// async function createArcs() {
+//     await client.sql`
+//         CREATE TABLE IF NOT EXISTS arcs (
+//             name VARCHAR(50) PRIMARY KEY,
+//             arc_order INT NOT NULL
+//         )
+//     `
+// }
+
+// async function seedArcs(){
+//     const insertedArcs = await Promise.all(
+//         arcs.map(async (arc) => {
+//             return client.sql `
+//                 INSERT INTO arcs (name, arc_order)
+//                 VALUES (${arc.name}, ${arc.arc_order})
+//                 ON CONFLICT (name) DO NOTHING;
+//             `
+//         })
+//     )
+
+//     return insertedArcs
+// }
+
 export async function GET(){
     try{
         await client.sql`BEGIN`;
-        //await seedCharacters();
+        // await seedArcs()
         await client.sql`COMMIT`;
         return Response.json({ message: "Tables seeded successfully"});
     }catch(error){

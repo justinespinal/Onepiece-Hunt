@@ -7,7 +7,6 @@ import "../styles/GuessCard.css"
 import { UserProfile } from "@auth0/nextjs-auth0/client"
 
 export default function GuessCard({attempts, user}:{attempts: number, user: UserProfile | undefined}) {
-    console.log(typeof user)
     return (
         <div className="bg-[#ece4c4] p-[6px] rounded border-[2px] border-[#584c44] relative">
             <Image

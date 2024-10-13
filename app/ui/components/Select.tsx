@@ -8,7 +8,6 @@ export default function Select({characters, checkCorrect, user, won}:{characters
     let value = "z"
     const [filtered, setFiltered] = useState<Character[]|undefined>([])
     const [guessed, setGuessed] = useState<Set<string> | undefined>(new Set())
-    console.log(characters)
 
     function updateValue(target:string){
         value = target

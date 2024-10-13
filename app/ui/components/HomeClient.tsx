@@ -5,7 +5,7 @@ import Select from "./Select"
 import Choices from "./Choices"
 import { useState } from "react"
 import { UserProfile, useUser } from '@auth0/nextjs-auth0/client';
-// import { refreshCache } from "@/app/lib/action"
+import { refreshCache } from "@/app/lib/action"
 import GuessCard from "./GuessCard"
 import Link from "next/link"
 import Winner from "./Winner"
@@ -23,7 +23,6 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
 
     const reRollCharacter = async () => {
         try{
-            console.log("in home client")
             const data = await fetch("/api/fetchRandomCharacter")
             const response = await data.json()
             const newRandomCharacter: Character = {
@@ -55,7 +54,6 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
     const checkCorrect = (character: Character) => {
         setChoiceMade(true)
         setGuessed([character].concat(charactersGuessed? charactersGuessed : []))
-        console.log("in")
         if(character.id==random?.id) {
             setGuesses(guesses+1)
             setWinner(true)
@@ -95,7 +93,7 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
                 )}
             </Link>
             <a href="/api/auth/logout">{user ? "Logout" : ""}</a>
-            {/* <button onClick={refreshCache}>Refresh</button> */}
+            <button onClick={refreshCache}>Refresh</button>
             <Image
                 src="/assets/logo.png"
                 width={500}
