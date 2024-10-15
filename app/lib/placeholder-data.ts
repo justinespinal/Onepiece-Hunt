@@ -8,7 +8,7 @@ export const characters = [
         lastBounty: 3000000000,
         height: 174,
         origin: "East Blue",
-        firstArc: "Romance Dawn Arc",
+        firstArc: "Romance Dawn",
         imageUrl: " "
     },
     {
@@ -20,7 +20,7 @@ export const characters = [
         lastBounty: 1111000000,
         height: 181,
         origin: "East Blue",
-        firstArc: "Romance Dawn Arc",
+        firstArc: "Romance Dawn",
         imageUrl: " "
     },
     {
@@ -32,7 +32,7 @@ export const characters = [
         lastBounty: 366000000,
         height: 170,
         origin: "East Blue",
-        firstArc: "Orange Town Arc",
+        firstArc: "Romance Dawn",
         imageUrl: " "
     },
     {
@@ -44,7 +44,7 @@ export const characters = [
         lastBounty: 930000000,
         height: 188,
         origin: "West Blue",
-        firstArc: "Alabasta Arc",
+        firstArc: "Alabasta",
         imageUrl: " "
     },
     {
@@ -56,7 +56,7 @@ export const characters = [
         lastBounty: 1032000000,
         height: 180,
         origin: "North Blue",
-        firstArc: "Baratie Arc",
+        firstArc: "Baratie",
         imageUrl: " "
     },
     {
@@ -68,7 +68,7 @@ export const characters = [
         lastBounty: 3000000000,
         height: 191,
         origin: "North Blue",
-        firstArc: "Sabaody Arc",
+        firstArc: "Sabaody Archipelago",
         imageUrl: " "
     },
     {
@@ -80,7 +80,7 @@ export const characters = [
         lastBounty: 1659000000,
         height: 191,
         origin: "Amazon Lily",
-        firstArc: "Amazon Lily Arc",
+        firstArc: "Amazon Lily",
         imageUrl: " "
     },
     {
@@ -92,7 +92,7 @@ export const characters = [
         lastBounty: 340000000,
         height: 305,
         origin: "North Blue",
-        firstArc: "Jaya Arc",
+        firstArc: "Jaya",
         imageUrl: " "
     },
     {
@@ -104,7 +104,7 @@ export const characters = [
         lastBounty: 4048900000,
         height: 199,
         origin: "West Blue",
-        firstArc: "Romance Dawn Arc",
+        firstArc: "Romance Dawn",
         imageUrl: " "
     },
     {
@@ -116,8 +116,248 @@ export const characters = [
         lastBounty: 4388000000,
         height: 880,
         origin: "Elbaf",
-        firstArc: "Whole Cake Arc",
+        firstArc: "Whole Cake",
         imageUrl: " "
+    },
+    {
+        name: "Jinbe",
+        gender: "Male",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "None",
+        haki: "Observation, Armament",
+        lastBounty: 1100000000,
+        height: 301,
+        origin: "Fish-Man Island",
+        firstArc: "Fish-Man Island",
+        imageUrl: "/Jinbe.png"
+    },
+    {
+        name: "Franky",
+        gender: "Male",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "None",
+        haki: "None",
+        lastBounty: 394000000,
+        height: 240,
+        origin: "South Blue",
+        firstArc: "Water 7",
+        imageUrl: "/Franky.png"
+    },
+    {
+        name: "Brook",
+        gender: "Male",
+        affiliation: "Straw Hat Pirates",
+        devilFruit: "Paramecia",
+        haki: "None",
+        lastBounty: 383000000,
+        height: 277,
+        origin: "West Blue",
+        firstArc: "Thriller Bark",
+        imageUrl: "/Brook.png"
+    },
+    {
+        name: "Portgas D. Ace",
+        gender: "Male",
+        affiliation: "Whitebeard Pirates",
+        devilFruit: "Logia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 550000000,
+        height: 185,
+        origin: "East Blue",
+        firstArc: "Alabasta",
+        imageUrl: "/Ace.png"
+    },
+    {
+        name: "Edward Newgate (Whitebeard)",
+        gender: "Male",
+        affiliation: "Whitebeard Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 5046000000,
+        height: 666,
+        origin: "Sphinx",
+        firstArc: "Marineford",
+        imageUrl: "/Whitebeard.png"
+    },
+    {
+        name: "Sabo",
+        gender: "Male",
+        affiliation: "Revolutionary Army",
+        devilFruit: "Logia",
+        haki: "Observation, Armament",
+        lastBounty: 602000000,
+        height: 187,
+        origin: "East Blue",
+        firstArc: "Dressrosa",
+        imageUrl: "/Sabo.png"
+    },
+    {
+        name: "Crocodile",
+        gender: "Male",
+        affiliation: "Cross Guild",
+        devilFruit: "Logia",
+        haki: "None",
+        lastBounty: 1965000000,
+        height: 253,
+        origin: "Grand Line",
+        firstArc: "Alabasta",
+        imageUrl: "/Crocodile.png"
+    },
+    {
+        name: "Eustass Kid",
+        gender: "Male",
+        affiliation: "Kid Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 3000000000,
+        height: 205,
+        origin: "South Blue",
+        firstArc: "Sabaody Archipelago",
+        imageUrl: "/Kid.png"
+    },
+    {
+        name: "Kaido",
+        gender: "Male",
+        affiliation: "Beast Pirates",
+        devilFruit: "Mythical Zoan",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 4611000000,
+        height: 710,
+        origin: "Grand Line",
+        firstArc: "Wano Country",
+        imageUrl: "/Kaido.png"
+    },
+    {
+        name: "Marshall D. Teach (Blackbeard)",
+        gender: "Male",
+        affiliation: "Blackbeard Pirates",
+        devilFruit: "Logia, Paramecia",
+        haki: "Observation, Armament",
+        lastBounty: 3960000000,
+        height: 344,
+        origin: "Grand Line",
+        firstArc: "Jaya",
+        imageUrl: "/Blackbeard.png"
+    },
+    {
+        name: "Charlotte Katakuri",
+        gender: "Male",
+        affiliation: "Big Mom Pirates",
+        devilFruit: "Paramecia",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 1057000000,
+        height: 509,
+        origin: "Grand Line",
+        firstArc: "Whole Cake Island",
+        imageUrl: "/Katakuri.png"
+    },
+    {
+        name: "Kuzan (Aokiji)",
+        gender: "Male",
+        affiliation: "Marine",
+        devilFruit: "Logia",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Unknown as he's a former Marine
+        height: 298,
+        origin: "South Blue",
+        firstArc: "Long Ring Long Land",
+        imageUrl: "/Aokiji.png"
+    },
+    {
+        name: "Borsalino (Kizaru)",
+        gender: "Male",
+        affiliation: "Marine",
+        devilFruit: "Logia",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Marine members don't have bounties
+        height: 302,
+        origin: "North Blue",
+        firstArc: "Sabaody Archipelago",
+        imageUrl: "/Kizaru.png"
+    },
+    {
+        name: "Sengoku",
+        gender: "Male",
+        affiliation: "Marine",
+        devilFruit: "Mythical Zoan",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Marine members don't have bounties
+        height: 278,
+        origin: "North Blue",
+        firstArc: "Marineford",
+        imageUrl: "/Sengoku.png"
+    },
+    {
+        name: "Dracule Mihawk",
+        gender: "Male",
+        affiliation: "Cross Guild",
+        devilFruit: "None",
+        haki: "Observation, Armament, Conqueror",
+        lastBounty: 3590000000,
+        height: 198,
+        origin: "Grand Line",
+        firstArc: "Baratie",
+        imageUrl: "/Mihawk.png"
+    },
+    {
+        name: "Bartholomew Kuma",
+        gender: "Male",
+        affiliation: "Revolutionary Army",
+        devilFruit: "Paramecia",
+        haki: "None",
+        lastBounty: 296000000,
+        height: 689,
+        origin: "South Blue",
+        firstArc: "Thriller Bark",
+        imageUrl: "/Kuma.png"
+    },
+    {
+        name: "Monkey D. Garp",
+        gender: "Male",
+        affiliation: "Marine",
+        devilFruit: "None",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Marine members don't have bounties
+        height: 287,
+        origin: "East Blue",
+        firstArc: "Post-Enies Lobby",
+        imageUrl: "/Garp.png"
+    },
+    {
+        name: "Rob Lucci",
+        gender: "Male",
+        affiliation: "CP0",
+        devilFruit: "Zoan",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Government agents don’t have public bounties
+        height: 212,
+        origin: "East Blue",
+        firstArc: "Water 7",
+        imageUrl: "/Lucci.png"
+    },
+    {
+        name: "Smoker",
+        gender: "Male",
+        affiliation: "Marine",
+        devilFruit: "Logia",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Marine members don’t have bounties
+        height: 209,
+        origin: "Grand Line",
+        firstArc: "Loguetown",
+        imageUrl: "/Smoker.png"
+    },
+    {
+        name: "Tashigi",
+        gender: "Female",
+        affiliation: "Marine",
+        devilFruit: "None",
+        haki: "Observation, Armament",
+        lastBounty: 0, // Marine members don’t have bounties
+        height: 170,
+        origin: "East Blue",
+        firstArc: "Loguetown",
+        imageUrl: "/Tashigi.png"
     }
 ];
 
