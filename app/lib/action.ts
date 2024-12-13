@@ -49,13 +49,13 @@ export async function refreshLeaderboard(){
   try{
     await sql`BEGIN`;
     await sql`
-      TRUNCATE leaderboard;
+      DELETE FROM leaderboard;
     `
     await sql`COMMIT`
-    //return true
+    return { success: true, message: 'Leaderboard refreshed successfully' }
   }catch(error){
     console.log(error)
     await sql`ROLLBACK`
-    //return false
+    return { success: false, message: 'Failed to refresh leaderboard' }
   }
 }
