@@ -44,7 +44,7 @@ export default function Leaderboard({clickedLeaderboard, toggleLeaderboard}:{cli
                     <div className="border-[2px] border-[#584c44] bg-[#fffcf4] h-full pl-10 pt-5 font-semibold text-lg md:text-3xl">
                         <ol className="list-decimal">
                             {(topTen?.map((user) => (
-                                    <li>{user.email.split('@')[0]}:    {user.score}</li>
+                                    <li key={user.email.split('@')[0]}>{user.email.split('@')[0]}:    {user.score}</li>
                             )))}
                         </ol>
                     </div>

@@ -1,6 +1,6 @@
 
 import { db } from "@vercel/postgres";
-import { characters } from "../lib/placeholder-data";
+// import { characters } from "../lib/placeholder-data";
 // import { arcs } from "../lib/placeholder-data";
 
 const client = await db.connect();
@@ -37,20 +37,20 @@ const client = await db.connect();
 //     `
 // }
 
-async function seedCharacters() {
+// async function seedCharacters() {
     
-    const insertedCharacter = await Promise.all(
-        characters.map(async (character) => {
-        return client.sql`
-        INSERT INTO character (name, gender, affiliation, devilfruit, haki, lastbounty, height, origin, firstarc, imageurl)
-        VALUES (${character.name}, ${character.gender}, ${character.affiliation}, ${character.devilFruit}, ${character.haki}, ${character.lastBounty}, ${character.height}, ${character.origin}, ${character.firstArc}, ${character.imageUrl})
-        ON CONFLICT (name) DO NOTHING;
-        `;
-      }),
-    )
+//     const insertedCharacter = await Promise.all(
+//         characters.map(async (character) => {
+//         return client.sql`
+//         INSERT INTO character (name, gender, affiliation, devilfruit, haki, lastbounty, height, origin, firstarc, imageurl)
+//         VALUES (${character.name}, ${character.gender}, ${character.affiliation}, ${character.devilFruit}, ${character.haki}, ${character.lastBounty}, ${character.height}, ${character.origin}, ${character.firstArc}, ${character.imageUrl})
+//         ON CONFLICT (name) DO NOTHING;
+//         `;
+//       }),
+//     )
 
-    return insertedCharacter
-}
+//     return insertedCharacter
+// }
 
 // async function createArcs() {
 //     await client.sql`

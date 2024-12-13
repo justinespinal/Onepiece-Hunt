@@ -1,11 +1,9 @@
 "use server"
 
-import { UserProfile } from "@auth0/nextjs-auth0/client";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 import { sql } from "@vercel/postgres";
-import { db } from "@vercel/postgres";
 
 
 export async function refreshCache(){

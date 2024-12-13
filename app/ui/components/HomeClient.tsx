@@ -5,7 +5,7 @@ import Select from "./Select"
 import Choices from "./Choices"
 import { useState } from "react"
 import { UserProfile, useUser } from '@auth0/nextjs-auth0/client';
-import { refreshCache, refreshLeaderboard } from "@/app/lib/action"
+import { refreshLeaderboard } from "@/app/lib/action"
 import GuessCard from "./GuessCard"
 import Link from "next/link"
 import Winner from "./Winner"

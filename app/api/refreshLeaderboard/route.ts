@@ -1,7 +1,6 @@
-import { NextResponse } from "next/server";
 import { refreshLeaderboard } from "@/app/lib/action";
 
-export async function GET(request: Request){
+export async function GET(){
 
     const response = await refreshLeaderboard()
 

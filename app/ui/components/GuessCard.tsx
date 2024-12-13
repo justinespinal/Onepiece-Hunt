@@ -6,10 +6,6 @@ import Image from "next/image"
 import "../styles/GuessCard.css"
 import { UserProfile } from "@auth0/nextjs-auth0/client"
 
-import Leaderboard from "./Leaderboard"
-import { fetchTopTen } from "@/app/lib/data"
-
-import { useState } from "react";
 export default function GuessCard({attempts, user, LeaderboardClicked}:{attempts: number, user: UserProfile | undefined, LeaderboardClicked: () => void}) {
 
     return (
