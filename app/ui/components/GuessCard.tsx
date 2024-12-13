@@ -6,7 +6,12 @@ import Image from "next/image"
 import "../styles/GuessCard.css"
 import { UserProfile } from "@auth0/nextjs-auth0/client"
 
-export default function GuessCard({attempts, user}:{attempts: number, user: UserProfile | undefined}) {
+import Leaderboard from "./Leaderboard"
+import { fetchTopTen } from "@/app/lib/data"
+
+import { useState } from "react";
+export default function GuessCard({attempts, user, LeaderboardClicked}:{attempts: number, user: UserProfile | undefined, LeaderboardClicked: () => void}) {
+
     return (
         <div className="bg-[#ece4c4] p-[6px] rounded border-[2px] border-[#584c44] relative">
             <Image
@@ -23,11 +28,18 @@ export default function GuessCard({attempts, user}:{attempts: number, user: User
                     <a href="/api/auth/login" className="text-slate-400">Sign up or Log in to play!</a>
                 }
                 {
-                    attempts===0 && user &&
-                    <h3 className="text-slate-400">Type any character to begin</h3>
-                }
-                {attempts!=0 && user &&
-                    <h3 className="text-slate-400">Attempts made: {attempts}</h3>
+                    user &&
+                    <div>
+                        {
+                            attempts == 0 &&
+                            <h3 className="text-slate-400">Type any character to begin</h3>
+                        }
+                        {
+                            attempts !=0 &&
+                            <h3 className="text-slate-400">Attempts made: {attempts}</h3>
+                        }
+                        <span className="text-[#584c44] hover:cursor-pointer" onClick={LeaderboardClicked}>Leaderboard</span>
+                    </div>
                 }
             </div>
             <Image
@@ -35,7 +47,7 @@ export default function GuessCard({attempts, user}:{attempts: number, user: User
                 width={28}
                 height={28}
                 alt="bottom left corner guess card"
-                className="absolute top-[7.7rem] right-[22.75rem]"
+                className="absolute top-[9.1rem] right-[22.75rem]"
             />
         </div>
     )

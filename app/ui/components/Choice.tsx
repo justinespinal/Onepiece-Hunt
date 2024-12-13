@@ -41,7 +41,7 @@ export default function Choice({character, random}:{character: Character | undef
         if(stringBounty.length >= 10){
             return `${stringBounty?.charAt(0)}.${stringBounty?.charAt(1)} B`
         }else if(stringBounty.length>=9){
-            return `${stringBounty?.charAt(0)}.${stringBounty?.charAt(1)} M`
+            return `${stringBounty?.charAt(0)}${stringBounty?.charAt(1)}${stringBounty?.charAt(2)} M`
         }else{
             return bounty.toString()
         }
@@ -87,7 +87,7 @@ export default function Choice({character, random}:{character: Character | undef
                     src={`/assets${character?.imageurl}`}
                     width={100}
                     height={100}
-                    alt="nami"
+                    alt={`${character?.name}`}
                     className="square-items"
                 />
             </div>

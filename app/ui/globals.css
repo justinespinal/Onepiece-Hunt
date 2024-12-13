@@ -52,3 +52,41 @@ body {
 .partial{
   background-color: #f8dc44;
 }
+
+.fadeInAnimation {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from{
+    transform: translateY(150px);
+  }
+  0%{
+    opacity: 0%;
+  }
+  12.5%{
+    opacity: 12.5%;
+  }
+  25%{
+    opacity: 25%;
+  }
+  37.5%{
+    opacity: 37.5%;
+  }
+  50%{
+    opacity: 50%;
+  }
+  62.5%{
+    opacity: 62.5%;
+  }
+  75%{
+    opacity: 75%;
+  }
+  87.5%{
+    opacity: 87.5%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}

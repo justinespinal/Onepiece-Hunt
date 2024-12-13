@@ -78,7 +78,7 @@ async function seedCharacters() {
 export async function GET(){
     try{
         await client.sql`BEGIN`;
-        await seedCharacters()
+        // await seedCharacters()
         await client.sql`COMMIT`;
         return Response.json({ message: "Tables seeded successfully"});
     }catch(error){

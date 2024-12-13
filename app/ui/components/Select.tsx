@@ -37,7 +37,7 @@ export default function Select({characters, checkCorrect, user, won}:{characters
                     <input placeholder="Sign in to play" disabled className="w-full p-2 placeholder:text-slate-500 text-black bg-transparent border-[3px] rounded border-[#ece4c4]"></input>
                 }
             </div>
-            <div className="max-h-[20vh] w-full rounded bg-[#fffcf4] overflow-y-auto absolute">
+            <div className="max-h-[20vh] w-full rounded bg-[#fffcf4] overflow-y-auto absolute z-50">
                 {filtered?.map((character) => (
                     <div onClick={async () => {await choiceMade(character)}} key={character.id} className="text-black bg-blue hover:bg-blue-400">
                         <SelectItem name={character.name} imageurl={character.imageurl} />

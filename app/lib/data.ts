@@ -34,3 +34,16 @@ export async function fetchArcOrder({name}:{name:string | undefined}){
         console.log(error)
     }
 }
+
+export async function fetchTopTen(){
+    try{
+        const result = await sql`
+            SELECT * FROM leaderboard
+            ORDER BY score ASC;
+        `
+
+        return result.rows
+    }catch(error){
+        console.log(error)
+    }
+}

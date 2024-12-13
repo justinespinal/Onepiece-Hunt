@@ -5,11 +5,12 @@ import Select from "./Select"
 import Choices from "./Choices"
 import { useState } from "react"
 import { UserProfile, useUser } from '@auth0/nextjs-auth0/client';
-// import { refreshCache } from "@/app/lib/action"
+import { refreshCache, refreshLeaderboard } from "@/app/lib/action"
 import GuessCard from "./GuessCard"
 import Link from "next/link"
 import Winner from "./Winner"
 import clsx from "clsx"
+import Leaderboard from "./Leaderboard"
 
 export default function HomeClient({characters, initialRandom}:{characters:Character[]|undefined, initialRandom:Character | undefined}) {
     const [choiceMade, setChoiceMade] = useState(false)
@@ -17,9 +18,14 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
     const [won, setWinner] = useState(false)
     const [charactersGuessed, setGuessed] = useState<Character[]|undefined>([])
     const [random, setRandomCharacter] = useState<Character | undefined>(initialRandom)
-    
+    const [boardClicked, setBoardClicked] = useState(false)
+
     //error, isLoading
     const { user } = useUser();
+
+    function LeaderboardClicked(){
+        setBoardClicked(!boardClicked)
+    }
 
     const reRollCharacter = async () => {
         try{
@@ -51,12 +57,33 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
         return user.picture as string
     }
 
+    const updateDB = async (guesses: number) => {
+        try{
+            const res = await fetch("/api/updateLeaderboard" , {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    user: user?.email,
+                    guesses: guesses
+                }),
+            });
+    
+            const result = await res.json()
+            console.log(result)
+        }catch(error){
+            console.log(error)
+        }
+    }
+
     const checkCorrect = (character: Character) => {
         setChoiceMade(true)
         setGuessed([character].concat(charactersGuessed? charactersGuessed : []))
         if(character.id==random?.id) {
             setGuesses(guesses+1)
             setWinner(true)
+            updateDB(guesses+1)
         }
         else setGuesses(guesses+1)
     }
@@ -69,7 +96,7 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
     }
     
     return (
-        <div className="flex flex-col justify-center items-center relative overflow-y-hidden">
+        <div className="flex flex-col justify-center items-center relative overflow-y-hidden h-[100vh]">
             <div className={clsx(
                 "justify-center items-center absolute z-50",
                 {
@@ -79,6 +106,12 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
                 )}>
                 {won && 
                     <Winner character={random} guesses={guesses} resetGame={resetGame} reRollCharacter={reRollCharacter}/>
+                }
+            </div>
+            <div id="leaderboad" className="justify-center items-center absolute z-50">
+                {
+                    boardClicked && 
+                    <Leaderboard clickedLeaderboard={boardClicked} toggleLeaderboard={LeaderboardClicked}/>
                 }
             </div>
             <Link href="/profile" className="ml-auto mt-10 mr-10 w-[3em]">
@@ -93,7 +126,9 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
                 )}
             </Link>
             <a href="/api/auth/logout">{user ? "Logout" : ""}</a>
-            {/* <button onClick={refreshCache}>Refresh</button> */}
+            <form action={refreshLeaderboard}>
+                <button type="submit">Refresh Leaderboard</button>
+            </form>
             <Image
                 src="/assets/logo.png"
                 width={500}
@@ -102,7 +137,7 @@ export default function HomeClient({characters, initialRandom}:{characters:Chara
                 className="transition-all hover:scale-110"
             />
             <div className="grid grid-cols-1 gap-3 items-center pb-3">
-                <GuessCard attempts={guesses} user={user}/>
+                <GuessCard attempts={guesses} user={user} LeaderboardClicked={LeaderboardClicked}/>
                 <div className="">
                     <Select characters={characters} checkCorrect={checkCorrect} user={user} won={won}/>
                 </div>

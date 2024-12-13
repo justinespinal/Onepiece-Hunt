@@ -1,9 +1,3 @@
-export type User = {
-    username: string;
-    email: string;
-    password: string;
-}
-
 export type Character = {
     id: string,
     name: string,
@@ -21,4 +15,10 @@ export type Character = {
 export type Arc = {
     name: string,
     arc_order: number
+}
+
+export type User = {
+    id: string,
+    email: string,
+    score: number
 }
