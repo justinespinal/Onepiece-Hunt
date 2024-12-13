@@ -1,3 +1,9 @@
 {
-  "test": "test"
+  "crons": [
+    {
+      "path": "/api/refreshLeaderboard",
+      "schedule": "0 0 * * *"
+    }
+  ]
 }
+
